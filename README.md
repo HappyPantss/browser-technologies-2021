@@ -1,212 +1,60 @@
-# Browser Technologies @cmda-minor-web 20-21
+Cookies
+Waarvoor worden cookies precies gebruikt?
+Jouw bezoek aan websites levert bedrijven een schat aan gegevens. Er zijn bedrijven die meekijken tijdens het surfen, zoals Facebook en advertentienetwerken. Zulke bedrijven bewaren jouw surfgedrag in de cookies. Omdat die cookies niet altijd goed zijn voor je privacy is het een goede zet regelmatig de cookie bestanden op je pc op te ruimen.
 
-//Robuuste, toegankelijke websites ontwerpen en maken …
+Sommige websites staan toe dat andere websites ook cookies kunnen plaatsen op de pc van de gebruiker. Dat soort cookies noemen we cookies van derden of 3rd party cookies.
 
-Één van de mooiste [principes](https://www.w3.org/DesignIssues/Principles.html) van het web is dat iedereen met een computer en een browser het web kan gebruik. [Het web is voor iedereen](https://www.youtube.com/watch?v=UMNFehJIi0E). Het is geen gecontroleerde (programmeer) omgeving, je kan er gerust van uit gaan dat niemand precies hetzelfde te zien krijgt als wat jij in je browser ziet. Er zijn technische beperkingen, zoals afmetingen van de browser, grootte van het apparaat, manier van interactie, kwaliteit van de hardware, kwaliteit van het netwerk en er zijn mensen, allemaal verschillende mensen ...
+Een cookie is een klein tekstbestandje dat een website op de harde schrijf van je computer zet op het moment dat je de site bezoekt. De belangrijkste functie van cookies is om de ene gebruiker van de andere te onderscheiden. Je komt cookies dan ook veel tegen bij websites waarbij je moet inloggen. Een cookie zorgt dat je ingelogd blijft terwijl je de site gebruikt.
 
-In het vak Browser Technologies gaan we onderzoeken wat Progressive Enhancement is en hoe je dit kan toepassen om goede, robuuste, toegankelijke websites te maken. Voor iedereen. Het web is voor iedereen, in dit vak leer je hoe je daarvoor kan zorgen.
+Hoe kan je cookies uitzetten?
+In Google Chrome:
+Open Chrome op uw computer.
+Klik rechtsboven op Meer  Instellingen.
+Klik onder 'Privacy en beveiliging' op Site-instellingen.
+Klik op Cookies.
+U kunt nu het volgende doen:
+Cookies inschakelen: Zet de schakelaar naast 'Geblokkeerd' op 'Aan'.
+Cookies uitschakelen: Schakel Sites toestaan cookie gegevens op te slaan en te lezen uit.
+In andere browsers
+Controleer de support site voor uw browser voor instructies.
 
-## Opdrachten
+Adblocker
+Je kunt een adblocker gebruiken om advertenties en tracking cookies in de webbrowser te blokkeren.
 
-het vak bestaat uit 3 opdrachten. In week 1 werken we aan opdracht 1 en 2. Vanaf week 2 werken we aan de eindopdracht.
+Wat gebeurd er als je cookies uitzet, terwijl je deze normaal aan had staan?
+Als je cookies uitzet, terwijl je ze aan had, logt hij je overal uit. Je kan daarna ook bijna nergens meer uitloggen.
 
-### Opdracht 1 🛹 NPM install Progressive- enhancement
+Als je cookies weer aan zet:<br>
+![](https://i.imgur.com/rZQpiHh.png)
 
-Voor de eerste opdracht gaan we onderzoeken wat Progressive Enhancement is.
+Wat kan ik nog als ik cookies uitzet?
+Websites die gebruik maken van een inlogsysteem, breken allemaal. Sites zoals GitHub, Instagram, Facebook, Netflix and Disney+ waar je moet inloggen om de content te kunnen zien, MOET je cookies voor aan zetten. Twitch werkt nog wel bijvoorbeeld, je hoeft hier niet in te loggen om een stream te kunnen zien. Maar als je wilt chatten, moet je wel inloggen, en dat werkt niet.
 
-- [Opdracht 1 - NPM install Progressive Enhancement](course/Opdracht1.md)
+Wat gebeurd er als je cookies uitzet?
+Inloggen bij heel veel websites kan niet meer. Sommige websites geven je een error message, en sommige websites geven helemaal niks mee. Ook niet dat het aan de cookies ligt.<br>
+![](https://i.imgur.com/0zyZXF4.png)
+![](https://i.imgur.com/4x1FL6W.png)
 
-### Opdracht 2 💔 Breek het Web
+Hoe zou je dat kunnen fixen?
+Door alle cookies in te schakelen, of alleen cookies van derden te blokkeren.
 
-Voor opdracht 2 ga je proberen het Web te laten 'breken' door (browser) features bewust uit te zetten. Wat gebeurt er als images, custom fonts, JavaScript, kleur, breedband internet niet optimaal werken? 
 
-- [Opdracht 2 - Breek het Web](course/Opdracht2.md)
+De cookiewet
+Websites moeten bezoekers toestemming vragen voor plaatsing van cookies. De cookiewet maakt een uitzondering voor cookies die niet privacygevoelig zijn. Bijvoorbeeld voor cookies die bezoekersaantallen bijhouden.
 
-### De eindopdracht ✨ Progressive Enhanced Browser Technologie
+Niet voor alle cookies is toestemming nodig. Voor cookies die geen of weinig inbreuk op de privacy maken, is geen toestemming van de bezoeker nodig. Dit zijn vaak cookies die een website beter laten werken. Het gaat bijvoorbeeld om:
 
-Voor de eindopdracht ontwerp en maak je een interactieve toepassing volgens het principe van Progressive Enhancement. Zorg dat alle gebruikers, met alle browsers, in iedere context de toepassing zo goed mogelijk te zien, horen en/of voelen krijgen. De meest 'enhanced' versie is 'delightful UX', mooi en prettig om te gebruiken.
+- Analytische cookies
+Websites gebruiken analytische cookies om bijvoorbeeld bezoekersstatistieken bij te houden. Zo krijgen zij beter inzicht in het functioneren van de website. Analytische cookies hebben nauwelijks gevolgen voor de privacy.
 
-- [De eindopdracht - Progressive Enhanced Browser Technologie](course/Eindopdracht.md)
+- Functionele cookies
+Functionele cookies zijn nodig om een dienst of webshop te laten functioneren. Dit zijn bijvoorbeeld bestanden die bijhouden wat er in een winkelwagentje zit.
 
+Tracking cookies: altijd toestemming vereist
+Websites moeten altijd uw toestemming vragen om cookies te plaatsen die inbreuk maken op uw privacy. Vaak gaat het dan om ‘tracking’ cookies. Deze cookies houden individueel surfgedrag bij en stellen profielen op om bijvoorbeeld gerichte advertenties mogelijk te maken.
 
-### Leerdoelen
-- _je leert wat Progressive enhancement is en hoe je dit kan toepassen._
-- _je leert Browser Technologies te onderzoeken, testen en implementeren als enhancement._
-- _je leert hoe je Feature Detection doet en wat je kan doen als een 'feature' niet werkt of wordt ondersteund._
+Verwerking persoonsgegevens bij plaatsing cookies
+Websites kunnen bij de plaatsing van cookies ook persoonsgegevens verwerken. Uw bank doet dat bijvoorbeeld. Bij deze cookies is de Algemene verordening gegevensbescherming (AVG) van toepassing.
 
-[Rubric](https://docs.google.com/spreadsheets/d/1MV3BWwwg_Zz1n-S_qOM4iSm4gA4M6g0xAxGacyaPuac/)
-
-## Planning & programma
-
-| Planning  | Woensdag  |  Donderdag | Vrijdag  |
-|---|---|---|---|
-| [Week 1](#week-1)  | Intro, College + briefing opdracht 1 | Presentaties opdracht 1, college +  briefing opdracht 2 | Presentaties opdracht 2 |
-| [Week 2](#week-2)  | College + Briefing De eindopdracht  | College + werken aan de opdracht | Feedbackgesprekken  |
-| [Week 3](#week-3)  | College + werken aan de opdracht  |  College + werken aan de opdracht | Feedbackgesprekken  |
-| [Week 4](#week-4)  | Beoordelingsgesprekken (Dinsdag en Woensdag) | Weekly Nerd | Goede vrijdag |
-
-### Week 1
-
-Het web is voor iedereen: Deze week gaan we onderzoeken wat Progressive Enhancement is en kennismaken met testen ~~en het device lab~~.
-
-#### Woensdag 10 maart
-
-Browser Technolgies begint op woensdag. In het eerste college krijg je uitleg over het programma en over het nut van Progressive Enancement. Wat is dat eigenlijk? De meeste CMD studenten hebben dit waarschijnlijk al eens gehoord en misschien iets mee gedaan in blok Tech. Progressive Enhancement, oftewel PE, is een manier hoe je je de code van een website kan bouwen zodat alle gebruikers met alle browsers je website zo goed mogelijk te zien krijgen. Met PE kun je robuuste websites bouwen die het altijd doen. PE is een manier van denken.
-
-| Woensdag 10/3 | Wat  |
-|---|---|
-| 9:30 | College les 1 over het vak, wie, wat, waar en PE  |
-|  | [Briefing Opdracht 1 🛹 NPM install Progressive-Enhancement](course/Opdracht1.md) |
-| 16:00 | Checkout per team |
-
-##### Lezen voor les 1 📖
-
-- [Everyone has JavaScript, right? by Stuart Langridge](https://kryogenix.org/code/browser/everyonehasjs.html)
-
-
-#### Donderdag 11 maart
-
-Donderdag gaan we in je Squad opdracht 1 bekijken en bespreken. Als het goed is heb je een beeld gevormd van Progressive Enhancement. Tijdens de bespreking kun je ook vragen te stellen, samen onderzoeken we wat PE is, waarom het goed is om te begrijpen en misschien kunnen we al wat voorbeelden bespreken hoe je het zou kunnen toepassen.
-
-In het college krijg je uitleg over opdracht 2. Voor deze opdracht ga je proberen het web te laten 'breken' door (browser) features bewust uit te zetten. Wat gebeurt er als images, custom fonts, JavaScript, kleur, breedband internet niet optimaal werken?
-
-🤟 Vandaag geeft [Aaron Gustafson](https://www.aaron-gustafson.com) een gast-college. hij schreef in 2008 het artikel [Understanding Progressive Enhancement](https://alistapart.com/article/understandingprogressiveenhancement/) waarna deze manier van denken een belangrijk onderdeel werd van Web Development. Aaron Gustafson werkt bij Microsoft als 'web standard advocate' met het Edge browser team.
-
-| Donderdag 11/3 | Wat  |
-|---|---|
-| 9:30 | Opdracht 1 bespreken in Squads 🛹 |
-| 10:30 | College les 2 over Browser features |
-|  | [Briefing Opdracht 2 💔 Breek het web](course/Opdracht2.md) |
-| 16:00 | Checkout per team |
-| 18:00 | Gastcollege Aaron Gustafson 🤟 |
-
-Lezen voor les 2 📖
-
-- [The unreasonable effectiveness of simple HTML by Terence Eden](https://shkspr.mobi/blog/2021/01/the-unreasonable-effectiveness-of-simple-html/)
-
-#### Vrijdag 12 maart
-
-Vrijdag bespreken we in clubjes opdracht 2. Zorg dat je de bevindingen van je onderzoek online kan presenteren. We gaan de hele feature lijst doorlopen en alle studenten kunnen laten zien wat ze hebben onderzocht, met voorbeelden, de problemen, cijfers en/of meningen. Bedenk ook hoe je de problemen zou kunnen oplossen.
-
-| Vrijdag 12/3 | Wat  |
-|---|---|
-| 11:30 | Opdracht 2 bespreken in clubje A 💔 |
-| 13:00 | Opdracht 2 bespreken in clubje B 💔 |
-| 14:30 | Opdracht 2 bespreken in clubje C 💔 |
-| 16:00 | Work Hard Play Hard |
-
-### Week 2
-
-In week 2 beginnen we met de eindopdracht. We hebben in week 1 onderzocht wat PE is en welke feautures wel of niet goed worden ondersteund. Deze week gaan we leren hoe je een interactieve toepassing in 3 lagen kan ontwerpen en wat je kan doen als een browser een 'enhancement' niet kan tonen.
-
-#### Woensdag 17 maart
-
-Woensdag krijg je een briefing van de eindopdracht en een college over browsers, en alles (!) wat daarbij hoort. Daarna gaan we aan de slag: als je een interactieve toepassing ontwerpt die alle gebruikers, met alle browsers moeten kunnen zien, dan zul je moeten bedenken hoe je de toepassing in 3 lagen kan opbouwen, eerst bepaal je de core functionaliteit en de user-delight ... schetsen maar!
-
-| Woensdag 17/3 | Wat  |
-|---|---|
-| 9:30 | College les 3 over browsers, browser detect, support detection en web views |
-|  | [Briefing eindopdracht ✨ Progressive Enhanced Browser Technologie](course/Eindopdracht.md) |
-| 10:30 | Sessies: User Deligt & Core functionaliteit ✨ |
-| 16:00 | Checkout per team |
-
-#### Donderdag 18 maart
-
-Donderdag gaan we voorbeelden van PE en feature detection bespreken in een college over form validatie. Daarna aan de slag met je ontwerp, in clubjes gaan we je ontwerpideeën bespreken en bedenken hoe je dit in 3 lagen zou kunnen bouwen.  
-
-🤟 Vandaag geeft [Heydon Pickering](https://heydonworks.com) een gastcollege om 14:00. Heydon Pickering is een web developer, hij geeft lezingen en schrijft over toegankelijkeid en web design o.a. voor [Smashing Magazin](https://www.smashingmagazine.com/author/heydon-pickering/). Vorige week heb je een metafoor voor PE bedacht naar aanleiding van een filmpje van Hedon Pickering zelf. Hij komt vandaag langs! Wat wil je hem vragen over het web?
-
-| Donderdag 18/3 | Wat  |
-|---|---|
-| 9:30 | College les 4 over form-validatie |
-| 10:30 | Sessies: Bouwen in 3 lagen ✨ |
-| 14:00 | Q&A Heydon Pickering 🤟 |
-| 16:00 | Checkout per team |
-
-Lezen voor les 4 📖
-
-- [Be progressive by Jeremy Keith](https://adactio.com/journal/7706)
-
-#### Vrijdag 19 maart
-
-Vrijdag bespreken we in clubjes de vorderingen voor de eindopdracht. Zorg dat je vandaag weet welke browsers (en devices) jij gaat testen.
-
-| Vrijdag 19/3 | Wat  |
-|---|---|
-| 11:30 | Vorderingen bespreken in clubje C ✨ |
-| 13:00 | Vorderingen bespreken in clubje A ✨ |
-| 14:30 | Vorderingen bespreken in clubje B ✨ |
-| 16:00 | Work Hard Play Hard |
-
-### Week 3
-
-Deze week werken we verder werken aan de eindopdracht en houden we gesprekken om jullie vorderingen te bespreken en vragen te beantwoorden.
-
-#### Woensdag 24 maart
-
-| Woensdag 24/3 | Wat  |
-|---|---|
-| 9:30 | College les 5 over Viewports |
-| 10:30 | Sessies: Feature detectie en testen ✨ |
-| 16:00 | Checkout per team |
-
-#### Donderdag 25 maart
-
-Donderdag gaan we verder werken aan de opdracht en doen we code-review sessies.
-
-🤟 Vandaag geeft Ischa Gast een presentatie.
-
-| Donderdag 25/3 | Wat  |
-|---|---|
-| 9:30 | Gastcollege Ischa Gast 🤟 |
-| 10:30 | Sessies: Code-reviews ✨ |
-| 16:00 | Checkout per team |
-
-Lezen voor les 6 📖
-
-- [A minimum viable experience makes for a resilient, inclusive website or app](https://piccalil.li/blog/a-minimum-viable-experience-makes-for-a-resilient-inclusive-website-or-app)
-
-#### Vrijdag 26 maart
-
-Vrijdag bespreken we in clubjes de vorderingen voor de eindopdracht. Zorg dat je een code-review hebt gekregen van twee mede-studenten.
-
-| Vrijdag 26/3 | Wat  |
-|---|---|
-| 11:30 | Vorderingen bespreken in clubje B ✨ |
-| 13:00 | Vorderingen bespreken in clubje C ✨ |
-| 14:30 | Vorderingen bespreken in clubje A ✨ |
-| 16:00 | Work Hard Play Hard |
-
-### Week 4
-
-In week 4 wordt de eindopdracht beoordeeld. Dan gaan we je werk bekijken, bespreken en beoordelen.
-
-| Dinsdag 30/3 | Wat  |
-|---|---|
-| 9:30 - 15:30 | Beoordelingsgesprekken ✨ |
-
-| Woensdag 31/3 | Wat  |
-|---|---|
-| 9:30 - 15:30 | Beoordelingsgesprekken ✨ |
-
-| Donderdag 1/4 | Wat  |
-|---|---|
-| 14:00 | [Weekly Nerd 2️⃣](https://github.com/cmda-minor-web/weekly-nerd-2021)|
-
-<!-- Add a link to your live demo in Github Pages 🌐-->
-
-<!-- ☝️ replace this description with a description of your own work -->
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+Wat vind ik van de cookiewet?
+Ik vind het een goed idee dat je gebruikers vraagt welke cookie gegevens ze wel en niet willen laten uitlezen. Dit is wat veiliger voor je privacy.
