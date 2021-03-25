@@ -12,33 +12,30 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-svg {
-    fill: brown;
+body {
+    background: #5F6CDE;
 }
 
-input[value='red']:checked~svg {
+#white:checked~.sofa svg {
+    fill: white;
+}
+
+#black:checked~.sofa svg {
+    fill: black;
+}
+
+#red:checked~.sofa svg {
     fill: red;
 }
 
-input[value='pink']:checked~.shirt {
+#green:checked~.sofa svg {
+    fill: green;
+}
+
+#blue:checked~.sofa svg {
+    fill: blue;
+}
+
+#pink:checked~.sofa svg {
     fill: pink;
-}
-
-input[value='red']:checked~.shirt {
-    fill: red;
-}
-
-.tshirt-container {
-    font-family: 'Source Code Pro', monospace;
-    line-height: 1.5em;
-    font-size: bold;
-    text-align: center;
-    --textColor: black;
-    word-wrap: break-word;
-    max-width: 50%;
-    color: var(--textColor);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }

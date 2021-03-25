@@ -1,7 +1,7 @@
 <%- include ("./partials/head") %>
     <a href="/">back</a>
     <section>
-        <form action="#" method="post" class="design-form">
+        <form action="/" method="post" class="design-form">
             <fieldset>
                 <legend>Personal Information</legend>
                 <div class="inputs">
@@ -40,12 +40,16 @@
 
                     <input type="radio" id="XL" name="size" value="XL">
                     <label for="XL">XL</label>
+
+                    <input type="radio" id="XXL" name="size" value="XXL">
+                    <label for="XXL">XXL</label>
                 </div>
             </fieldset>
             <fieldset>
-                <legend>Choose your Color</legend>
+                <legend>Customize</legend>
 
-                <div class="inputs">
+                <div class="block">
+                    <h2>Color:</h2>
                     <input type="radio" id="white" name="color" value="white">
                     <label for="white">White</label>
 
@@ -63,19 +67,15 @@
 
                     <input type="radio" id="pink" name="color" value="pink">
                     <label for="pink">Pink</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Choose your Text</legend>
 
-                <div class="inputs">
+                    <h2>Text:</h2>
+
                     <label for="text">Text</label>
-                    <input type="text" id="text" name="text">
-                </div>
-            </fieldset>
-            <figure class="tshirt-container">
-                <p>Hello World</p>
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" viewBox="0 0 40.143 40.143" xml:space="preserve">
+                    <input type="text" id="myInput" name="text" oninput="myFunction()">
+
+                    <div class="sofa">
+                        <p id="demo">[Custom Text]</p>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" viewBox="0 0 40.143 40.143" xml:space="preserve">
                     <g>
                         <path d="M29.248,4.118l-0.502,0.503V4.118h-2.473c-1.115,1.723-3.469,2.914-6.202,2.914c-2.732,0-5.086-1.191-6.201-2.914h-2.473
                             v0.503l-0.503-0.503L2,13.017l4.865,4.869l4.532-4.534v22.672h17.347V13.353l4.533,4.534l4.864-4.87L29.248,4.118z"/>
@@ -92,9 +92,15 @@
                             l2.038,2.04l3.117-3.119c0.572-0.573,1.432-0.744,2.18-0.434c0.748,0.31,1.235,1.039,1.235,1.848V34.024z"/>
                     </g>
                 </svg>
+                    </div>
+                </div>
+            </fieldset>
+            <figure class="tshirt-container">
             </figure>
             <input type="submit" value="send" class="save-button"></input>
         </form>
     </section>
+
+    <script src="/js/liveName.js"></script>
 
     <%- include ("./partials/footer") %>

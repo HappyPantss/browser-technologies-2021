@@ -5,13 +5,38 @@
         <h2>Overview T-Shirts</h2>
         <article><a href="/design">Design a new one</a></article>
         <article>
-            <a href="/"></a>
+            <section>
+                <p>
+                    Phone number:
+                    <%= postData.phone %>
+                </p>
+                <p>
+                    E-mail:
+                    <%= postData.email %>
+                </p>
+                <p>
+                    Gender:
+                    <%= postData.gender %>
+                </p>
+                <p>
+                    Size:
+                    <%= postData.size %>
+                </p>
+                <p>
+                    Text: "
+                    <%= postData.text %>
+                        "
+                </p>
+                <p>
+                    Color:
+                    <%= postData.color %>
+                </p>
         </article>
-    </section>
+        </section>
 
-    <section>
-        <h2>Shopping cart</h2>
-        <p>You're shopping cart is empty</p>
-        <a href="/order">Order your T-Shirt(s)</a>
-    </section>
-    <%- include ("./partials/footer") %>
+        <section>
+            <h2>Shopping cart</h2>
+            <p>You're shopping cart is empty</p>
+            <a href="/order">Order your T-Shirt(s)</a>
+        </section>
+        <%- include ("./partials/footer") %>
