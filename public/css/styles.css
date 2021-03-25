@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+svg {
+    fill: brown;
+}
+
+input[value='red']:checked~svg {
+    fill: red;
+}
+
+input[value='pink']:checked~.shirt {
+    fill: pink;
+}
+
+input[value='red']:checked~.shirt {
+    fill: red;
+}
+
+.tshirt-container {
+    font-family: 'Source Code Pro', monospace;
+    line-height: 1.5em;
+    font-size: bold;
+    text-align: center;
+    --textColor: black;
+    word-wrap: break-word;
+    max-width: 50%;
+    color: var(--textColor);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
