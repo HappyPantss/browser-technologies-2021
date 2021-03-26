@@ -3,38 +3,44 @@ function myFunction() {
     document.getElementById("demo").innerHTML = x;
 }
 
-const form = document.querySelector(".design-form")
+const form = document.querySelector(".design-form");
+
 form.addEventListener('blur', (event) => {
-    const formElement = document.querySelector(".design-form")
-    const formData = new FormData(formElement)
-    const obj = {}
+    const formElement = document.querySelector(".design-form");
+    const formData = new FormData(formElement);
+    const obj = {};
+
     for (var pair of formData.entries()) {
-        obj[pair[0]] = pair[1]
-        console.log(pair[0] + ': ' + pair[1]);
+        obj[pair[0]] = pair[1];
     }
-    localStorage.setItem('formData', JSON.stringify(obj))
-    console.log(JSON.parse(localStorage.getItem('formData')))
+
+    localStorage.setItem('formData', JSON.stringify(obj));
 }, true);
 
-function once() {
-    const data = localStorage.getItem('formData')
+function loadFormDataFromLocalStorage() {
+    const data = localStorage.getItem('formData');
+
     if (data) {
-        const parsedData = JSON.parse(data)
-        Object.keys(parsedData).forEach(key => {
-            if (parsedData[key]) {
-                const inputs = document.querySelectorAll(`.design-form *[name="${key}"]`)
-                inputs.forEach(input => {
-                    if (input.type === 'radio' && input.value === parsedData[key]) {
-                        input.checked = true;
-                    } else {
-                        input.value = parsedData[key]
+        const parsedData = JSON.parse(data);
+
+        for (var pair of Object.entries(parsedData)) {
+            const pairDomElement = document.getElementById(pair[0]);
+
+            if (pairDomElement) {
+                pairDomElement.value = pair[1];
+            } else {
+                const pairDomElements = document.getElementsByClassName(pair[0]);
+
+                for (const pairDomElement of pairDomElements) {
+                    if (pairDomElement.type == 'radio' && pairDomElement.value == pair[1]) {
+                        pairDomElement.checked = true;
                     }
-                })
+                }
             }
-        })
+        }
     }
 }
+
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('loaded')
-    once()
+    loadFormDataFromLocalStorage();
 }, false);
