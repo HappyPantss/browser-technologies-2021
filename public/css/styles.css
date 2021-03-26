@@ -14,6 +14,34 @@ html {
 
 body {
     background: #5F6CDE;
+    width: 60%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    padding: 2rem;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.overviewPieces {
+    display: flex;
+    height: 15rem;
+}
+
+.pieces {
+    border: 3px solid #5F6CDE;
+    border-radius: 1.5rem;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
 }
 
 #white:checked~.sofa svg {

@@ -16,20 +16,7 @@ app.set('views', 'views');
 
 app.use(express.static('public'));
 
-app.get('/', function(req, res) {
-    res.render("overview.ejs")
-});
-
-app.get('/design', function(req, res) {
-    res.render("design.ejs")
-});
-
-app.get('/order', function(req, res) {
-    res.render("order.ejs")
-});
-
-app.post('/', urlencodedParser, function(req, res) {
-
+app.all('/', urlencodedParser, function(req, res) {
     let shirt = {
         name: req.body.name,
         phone: req.body.phone,
@@ -51,6 +38,21 @@ app.post('/', urlencodedParser, function(req, res) {
     res.render("overview.ejs", {
         postData: shirt,
     })
+});
+
+app.get('/', function(req, res) {
+    const name = localStorage.getItem('name');
+    res.render("overview.ejs", {
+        postData: shirt,
+    })
+});
+
+app.get('/design', function(req, res) {
+    res.render("design.ejs")
+});
+
+app.get('/order', function(req, res) {
+    res.render("order.ejs")
 });
 
 // Actually set up the server
