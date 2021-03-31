@@ -6,9 +6,7 @@ import bodyParser from "body-parser";
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // Config object
-const config = {
-    port: 3000
-}
+const port = 3000;
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -41,7 +39,6 @@ app.all('/', urlencodedParser, function(req, res) {
 });
 
 app.get('/', function(req, res) {
-    const name = localStorage.getItem('name');
     res.render("overview.ejs", {
         postData: shirt,
     })
@@ -55,7 +52,6 @@ app.get('/order', function(req, res) {
     res.render("order.ejs")
 });
 
-// Actually set up the server
-app.listen(config.port, function() {
-    console.log(`Application started on port: http://localhost:${config.port}`);
-});
+app.listen(process.env.PORT || port, () =>
+    console.log(`Listening on port http://localhost:${port}`)
+);

@@ -1,5 +1,5 @@
-function myFunction() {
-    var x = document.getElementById("myInput").value;
+function changeText() {
+    var x = document.getElementById("text").value;
     document.getElementById("demo").innerHTML = x;
 }
 
