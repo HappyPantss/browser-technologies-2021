@@ -34,7 +34,7 @@ Javascript disabled:
 ![Javascript on](https://i.imgur.com/mIoHZWU.jpg)
 
 ### Mobile: Samsung Browser (Device: Samsung S9)
-![Javascript on](https://i.imgur.com/2vTHI1G.png)
+![Javascript on](https://i.imgur.com/mIoHZWU.jpg)
 ## Drag and Drop
 ### Desktop: Firefox
 ![Colorpicker js enabled](https://i.imgur.com/HEcRT9s.png)
