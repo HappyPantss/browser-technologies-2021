@@ -1,60 +1,47 @@
-Cookies
-Waarvoor worden cookies precies gebruikt?
-Jouw bezoek aan websites levert bedrijven een schat aan gegevens. Er zijn bedrijven die meekijken tijdens het surfen, zoals Facebook en advertentienetwerken. Zulke bedrijven bewaren jouw surfgedrag in de cookies. Omdat die cookies niet altijd goed zijn voor je privacy is het een goede zet regelmatig de cookie bestanden op je pc op te ruimen.
+# Progressive Web Apps @cmda-minor-web · 20-21
+# 🌍 Live version 
+This is the repository for browser-technologies CMD 2020/2021.
+Live version: https://custom-tshirt-bt.herokuapp.com/
+# 🚀 Installation
+**Clone the repository:**<br>
+`https://github.com/HappyPantss/browser-technologies-2021.git`
 
-Sommige websites staan toe dat andere websites ook cookies kunnen plaatsen op de pc van de gebruiker. Dat soort cookies noemen we cookies van derden of 3rd party cookies.
+**Install NPM:**<br>
+`npm install`
+# 🔧 Usage
+**Start the local server on port 3000:**<br>
+`npm run start`
 
-Een cookie is een klein tekstbestandje dat een website op de harde schrijf van je computer zet op het moment dat je de site bezoekt. De belangrijkste functie van cookies is om de ene gebruiker van de andere te onderscheiden. Je komt cookies dan ook veel tegen bij websites waarbij je moet inloggen. Een cookie zorgt dat je ingelogd blijft terwijl je de site gebruikt.
+> Use `npm run dev` if you're changing the code, so you only have to refresh the page to see the changes.
 
-Hoe kan je cookies uitzetten?
-In Google Chrome:
-Open Chrome op uw computer.
-Klik rechtsboven op Meer  Instellingen.
-Klik onder 'Privacy en beveiliging' op Site-instellingen.
-Klik op Cookies.
-U kunt nu het volgende doen:
-Cookies inschakelen: Zet de schakelaar naast 'Geblokkeerd' op 'Aan'.
-Cookies uitschakelen: Schakel Sites toestaan cookie gegevens op te slaan en te lezen uit.
-In andere browsers
-Controleer de support site voor uw browser voor instructies.
+**Visit the local website in your browser with:**<br>
+`http://localhost:3000/`
 
-Adblocker
-Je kunt een adblocker gebruiken om advertenties en tracking cookies in de webbrowser te blokkeren.
+# 🔨 Testing
+## localStorage
+### Desktop: Firefox
+Javascript enabled:
+![Javascript on](https://i.imgur.com/m5qEA3W.png)
+Javascript disabled:
+![Javascript off](https://i.imgur.com/D7Rp58M.png)
+### Desktop: Opera GX
+Javascript enabled:
+![Javascript on](https://i.imgur.com/bgTKUUh.png)
+Javascript disabled:
+![Javascript off](https://i.imgur.com/2vTHI1G.png)
 
-Wat gebeurd er als je cookies uitzet, terwijl je deze normaal aan had staan?
-Als je cookies uitzet, terwijl je ze aan had, logt hij je overal uit. Je kan daarna ook bijna nergens meer uitloggen.
+### Mobile: Android Chrome (Device: OnePlus 8 Pro)
+![Javascript on](https://i.imgur.com/mIoHZWU.jpg)
 
-Als je cookies weer aan zet:<br>
-![](https://i.imgur.com/rZQpiHh.png)
+### Mobile: Samsung Browser (Device: Samsung S9)
+![Javascript on](https://i.imgur.com/2vTHI1G.png)
+## Drag and Drop
+### Desktop: Firefox
+![Colorpicker js enabled](https://i.imgur.com/HEcRT9s.png)
+### Desktop: Opera GX
+![Colorpicker js enabled](https://i.imgur.com/G7MV440.png)
+### Mobile: Android Chrome (Device: OnePlus 8 Pro)
+<!-- ![Javascript on](https://i.imgur.com/nBZ1mJb.mp4) -->
 
-Wat kan ik nog als ik cookies uitzet?
-Websites die gebruik maken van een inlogsysteem, breken allemaal. Sites zoals GitHub, Instagram, Facebook, Netflix and Disney+ waar je moet inloggen om de content te kunnen zien, MOET je cookies voor aan zetten. Twitch werkt nog wel bijvoorbeeld, je hoeft hier niet in te loggen om een stream te kunnen zien. Maar als je wilt chatten, moet je wel inloggen, en dat werkt niet.
-
-Wat gebeurd er als je cookies uitzet?
-Inloggen bij heel veel websites kan niet meer. Sommige websites geven je een error message, en sommige websites geven helemaal niks mee. Ook niet dat het aan de cookies ligt.<br>
-![](https://i.imgur.com/0zyZXF4.png)
-![](https://i.imgur.com/4x1FL6W.png)
-
-Hoe zou je dat kunnen fixen?
-Door alle cookies in te schakelen, of alleen cookies van derden te blokkeren.
-
-
-De cookiewet
-Websites moeten bezoekers toestemming vragen voor plaatsing van cookies. De cookiewet maakt een uitzondering voor cookies die niet privacygevoelig zijn. Bijvoorbeeld voor cookies die bezoekersaantallen bijhouden.
-
-Niet voor alle cookies is toestemming nodig. Voor cookies die geen of weinig inbreuk op de privacy maken, is geen toestemming van de bezoeker nodig. Dit zijn vaak cookies die een website beter laten werken. Het gaat bijvoorbeeld om:
-
-- Analytische cookies
-Websites gebruiken analytische cookies om bijvoorbeeld bezoekersstatistieken bij te houden. Zo krijgen zij beter inzicht in het functioneren van de website. Analytische cookies hebben nauwelijks gevolgen voor de privacy.
-
-- Functionele cookies
-Functionele cookies zijn nodig om een dienst of webshop te laten functioneren. Dit zijn bijvoorbeeld bestanden die bijhouden wat er in een winkelwagentje zit.
-
-Tracking cookies: altijd toestemming vereist
-Websites moeten altijd uw toestemming vragen om cookies te plaatsen die inbreuk maken op uw privacy. Vaak gaat het dan om ‘tracking’ cookies. Deze cookies houden individueel surfgedrag bij en stellen profielen op om bijvoorbeeld gerichte advertenties mogelijk te maken.
-
-Verwerking persoonsgegevens bij plaatsing cookies
-Websites kunnen bij de plaatsing van cookies ook persoonsgegevens verwerken. Uw bank doet dat bijvoorbeeld. Bij deze cookies is de Algemene verordening gegevensbescherming (AVG) van toepassing.
-
-Wat vind ik van de cookiewet?
-Ik vind het een goed idee dat je gebruikers vraagt welke cookie gegevens ze wel en niet willen laten uitlezen. Dit is wat veiliger voor je privacy.
+### Mobile: Samsung Browser (Device: Samsung S9)
+![Javascript on](https://i.imgur.com/tUeP1LW.jpg)
