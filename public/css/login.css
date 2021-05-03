@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+div.container {
+    font-family: 'Oswald', sans-serif;
+    display: grid;
+    height: 100%;
+    grid-template-columns: [bgArea] 70% [loginArea] 30%;
+    /* grid-template-columns: [bgArea] 70vw [loginArea] 30vw; */
+}
+
+div.bgArea h1,
+div.loginArea h1 {
+    color: #9646D4;
+    font-size: 2.6rem;
+}
+
+
+/* Background Area */
+
+div.bgArea {
+    grid-area: bgArea;
+    text-align: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    /* background: repeating-linear-gradient( 90deg, #9646D4 0%, #9646D4 5%, white 5%, white 10%), #9646D4; */
+    background-image: url('../img/cake-pattern.png');
+    background-repeat: repeat;
+    background-size: 64px 64px;
+}
+
+
+/* --------------- */
+
+
+/* Login Area */
+
+div.loginArea {
+    grid-area: loginArea;
+    background-color: #9646D4;
+    padding: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div.loginArea input {
+    box-sizing: border-box;
+    border: 1px solid #CCCCCC;
+    padding: 1.3rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+div.loginArea label {
+    padding: 0.6rem 0;
+}
+
+div.loginArea input,
+div.loginArea label {
+    display: block;
+}
+
+div.loginArea button {
+    width: 100%;
+    background-color: #9646D4;
+    border: none;
+    color: #FFFFFF;
+    padding: 1.3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #9646D4;
+    -webkit-transition: background-color 0.1s ease-out;
+    -moz-transition: background-color 0.1s ease-out;
+    -o-transition: background-color 0.1s ease-out;
+    transition: background-color 0.1s ease-out;
+}
+
+div.loginArea button:hover {
+    /* background-color: #AD8EC5; */
+    background-color: white;
+    border: 1px solid #9646D4;
+    color: #9646D4;
+}
+
+div.loginArea button:active {
+    background-color: #9646D4;
+    color: white;
+}
+
+
+/* Customize the label (the container) */
+
+label.container {
+    display: block;
+    justify-content: start;
+    position: relative;
+    cursor: pointer;
+    width: 63%;
+}
+
+div.rememberMe {
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+label.container>span.text {
+    margin-left: 3rem;
+}
+
+div.loginArea span.checkmark {
+    border-radius: 0.5rem;
+    position: absolute;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #CCCCCC;
+}
+
+fieldset {
+    border: 3px solid #5F6CDE;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    background-color: #5F6CDE;
+    border-radius: 1.5rem;
+    color: white;
+    padding: 5px 10px;
+}
+
+input {
+    margin: 5px;
+}
+
+.sofa {
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#demo {
+    position: absolute;
+    margin-top: -6rem;
+    max-height: 5rem;
+    background-color: white;
+    padding: 2px;
+    max-width: 4rem;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.css-colors {
+    display: initial;
+}
+
+#white:checked~.sofa svg {
+    fill: white;
+}
+
+#black:checked~.sofa svg {
+    fill: black;
+}
+
+#red:checked~.sofa svg {
+    fill: red;
+}
+
+#green:checked~.sofa svg {
+    fill: green;
+}
+
+#blue:checked~.sofa svg {
+    fill: blue;
+}
+
+#pink:checked~.sofa svg {
+    fill: pink;
+}
+
+.droptarget {
+    width: 120px;
+    height: 45px;
+    padding: 10px;
+    color: white;
+    word-wrap: break-word;
+}
+
+.droptarget p {
+    margin-top: 0;
+}
+
+.droptarget:nth-of-type(3) p {
+    margin-top: 20px;
+}
+
+.dropzone {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}

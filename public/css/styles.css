@@ -59,7 +59,7 @@ input {
     margin: 5px;
 }
 
-.sofa {
+.drop {
     position: inherit;
     display: flex;
     justify-content: center;
@@ -81,27 +81,27 @@ input {
     display: initial;
 }
 
-.change-live#white:checked~.sofa svg {
+.change-live#white:checked~.drop svg {
     fill: white;
 }
 
-.change-live#black:checked~.sofa svg {
+.change-live#black:checked~.drop svg {
     fill: black;
 }
 
-.change-live#red:checked~.sofa svg {
+.change-live#red:checked~.drop svg {
     fill: red;
 }
 
-.color.change-live#green:checked~.sofa svg {
+.color.change-live#green:checked~.drop svg {
     fill: green;
 }
 
-.change-live#blue:checked~.sofa svg {
+.change-live#blue:checked~.drop svg {
     fill: blue;
 }
 
-.change-live#pink:checked~.sofa svg {
+.change-live#pink:checked~.drop svg {
     fill: pink;
 }
 

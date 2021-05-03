@@ -1,6 +1,6 @@
 function changeText() {
     var x = document.getElementById("text").value;
-    document.getElementById("demo").innerHTML = x;
+    document.getElementById("dragtarget").innerHTML = x;
 }
 
 const form = document.querySelector(".design-form");
@@ -19,9 +19,11 @@ form.addEventListener('blur', (event) => {
 
 function loadFormDataFromLocalStorage() {
     const data = localStorage.getItem('formData');
+    const dragtarget = document.querySelector("#dragtarget");
 
     if (data) {
         const parsedData = JSON.parse(data);
+        dragtarget.innerHTML = parsedData.text;
 
         for (var pair of Object.entries(parsedData)) {
             const pairDomElement = document.getElementById(pair[0]);

@@ -52,6 +52,10 @@ app.get('/order', function(req, res) {
     res.render("order.ejs")
 });
 
+app.get('/login', function(req, res) {
+    res.render("login.ejs")
+});
+
 app.listen(process.env.PORT || port, () =>
     console.log(`Listening on port http://localhost:${port}`)
 );
