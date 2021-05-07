@@ -43,6 +43,8 @@ div.bgArea {
 /* Login Area */
 
 div.loginArea {
+    overflow: auto;
+    height: 89.9vh;
     grid-area: loginArea;
     background-color: #9646D4;
     padding: 3rem;
@@ -58,8 +60,13 @@ div.loginArea input {
     font-size: 1rem;
 }
 
+#subBtn {
+    width: 60%;
+    margin: 0 auto;
+}
+
 div.loginArea label {
-    padding: 0.6rem 0;
+    padding: 0.6rem 0.6rem;
 }
 
 div.loginArea input,
@@ -67,30 +74,35 @@ div.loginArea label {
     display: block;
 }
 
-div.loginArea button {
-    width: 100%;
+a {
+    width: 40%;
     background-color: #9646D4;
-    border: none;
     color: #FFFFFF;
-    padding: 1.3rem;
-    border-radius: 0.5rem;
-    border: 1px solid #9646D4;
+    padding: 0.8rem;
+    border-radius: 1.5rem;
+    border: 3px solid #9646D4;
     -webkit-transition: background-color 0.1s ease-out;
     -moz-transition: background-color 0.1s ease-out;
     -o-transition: background-color 0.1s ease-out;
     transition: background-color 0.1s ease-out;
 }
 
-div.loginArea button:hover {
+a:hover {
     /* background-color: #AD8EC5; */
     background-color: white;
-    border: 1px solid #9646D4;
+    border: 3px solid #9646D4;
     color: #9646D4;
 }
 
-div.loginArea button:active {
+a:active {
     background-color: #9646D4;
     color: white;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 
@@ -124,20 +136,19 @@ div.loginArea span.checkmark {
 }
 
 fieldset {
-    border: 3px solid #5F6CDE;
+    border: 3px solid #9646D4;
     border-radius: 1.5rem;
     margin-bottom: 1rem;
 }
 
 legend {
-    background-color: #5F6CDE;
+    background-color: #9646D4;
     border-radius: 1.5rem;
     color: white;
-    padding: 5px 10px;
 }
 
 input {
-    margin: 5px;
+    margin: 5px 0;
 }
 
 .sofa {
@@ -162,30 +173,6 @@ input {
     display: initial;
 }
 
-#white:checked~.sofa svg {
-    fill: white;
-}
-
-#black:checked~.sofa svg {
-    fill: black;
-}
-
-#red:checked~.sofa svg {
-    fill: red;
-}
-
-#green:checked~.sofa svg {
-    fill: green;
-}
-
-#blue:checked~.sofa svg {
-    fill: blue;
-}
-
-#pink:checked~.sofa svg {
-    fill: pink;
-}
-
 .droptarget {
     width: 120px;
     height: 45px;
@@ -194,16 +181,63 @@ input {
     word-wrap: break-word;
 }
 
+.droptargetEdit {
+    width: 240px;
+    height: 100px;
+    padding: 10px;
+    color: white;
+    word-wrap: break-word;
+    /* border: 1px solid pink; */
+}
+
 .droptarget p {
     margin-top: 0;
+    text-shadow: 0px 0px 3px black;
+}
+
+.droptargetEdit p {
+    font-size: 1.6rem;
 }
 
 .droptarget:nth-of-type(3) p {
     margin-top: 20px;
 }
 
+.droptargetEdit:nth-of-type(1) p {
+    margin-top: -15px;
+}
+
+.droptargetEdit:nth-of-type(3) p {
+    margin-top: 80px;
+}
+
 .dropzone {
     display: flex;
     flex-direction: column;
     position: absolute;
+}
+
+.overviewPieces {
+    display: flex;
+    justify-content: center;
+    height: 30rem;
+}
+
+.pieces {
+    border: 5px solid #9646D4;
+    border-radius: 1.5rem;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    flex-direction: column;
+}
+
+ul {
+    text-align: left;
+}
+
+.prog-form {
+    background: red;
 }

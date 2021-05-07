@@ -30,7 +30,7 @@ app.all('/', urlencodedParser, function(req, res) {
     fs.writeFile('data.json', data, 'utf8', finished)
 
     function finished(err) {
-        console.log('succes')
+        // console.log('succes')
     }
 
     res.render("overview.ejs", {
