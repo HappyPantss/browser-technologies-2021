@@ -1,189 +1,61 @@
 <%- include ("./partials/head") %>
-    <style>
-        .progForm {
-            background-color: #ffffff;
-            margin: 60px auto;
-            padding: 40px;
-            min-width: 300px;
-            border-radius: 4px;
-        }
-        
-        .loginArea h1 {
-            text-align: center;
-            background: white;
-            padding: 1rem;
-            border-radius: 4px;
-        }
-        
-        .progForm input {
-            padding: 10px;
-            width: 100%;
-            font-size: 17px;
-            border: 1px solid #aaaaaa;
-        }
-        /* Mark input boxes that gets an error on validation: */
-        
-        .progForm input.invalid {
-            background-color: #ffdddd;
-        }
-        /* Hide all steps by default: */
-        
-        .progForm .tab {
-            display: none;
-        }
-        
-        .progForm button {
-            background-color: #9646D4;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 17px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        .progForm button:hover {
-            opacity: 0.8;
-        }
-        
-        .progForm #prevBtn {
-            background-color: #bbbbbb;
-        }
-        /* Make circles that indicate the steps of the form: */
-        
-        .progForm .step {
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbbbbb;
-            border: none;
-            border-radius: 50%;
-            display: inline-block;
-            opacity: 0.5;
-        }
-        
-        .progForm .step.active {
-            opacity: 1;
-            background-color: #9646D4;
-        }
-        /* Mark the steps that are finished and valid: */
-        
-        .progForm .step.finish {
-            background-color: #9646D4;
-        }
-        
-        #stepButtons {
-            display: none;
-        }
-        
-        .radio-toolbar input[type="radio"] {
-            opacity: 0;
-            position: fixed;
-            width: 0;
-        }
-        
-        .radio-toolbar label {
-            display: inline-block;
-            background-color: #ddd;
-            margin: 1rem 0;
-            font-size: 16px;
-            border: 2px solid #444;
-            border-radius: 4px;
-        }
-        
-        .radio-toolbar input[type="radio"]:checked+label {
-            background-color: #CBA3EA;
-            border-color: #9646D4;
-        }
-        
-        .radio-toolbar label:hover {
-            background-color: #dfd;
-        }
-        
-        .radio-toolbar input[type="radio"]:checked~.sofa svg {
-            fill: white;
-        }
-    </style>
 
     <div class="container">
         <div class="bgArea">
-            <h1>Design new T-Shirt</h1>
+            <h1>Shopping cart</h1>
 
+            <section class="cartPieces">
+                <p id="emptyCart"></p>
+                <article class="cartPiece">
+                    <article class="cartItems">
+                        <div class="cartItem">
+                            <div class="sofaCart">
+                                <svg fill="<%= postData.color %>" id="dropbox" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 40.143 40.143" xml:space="preserve">
+                                    <g>
+                                        <path d="M 28.744 38.024 L 11.397 38.024 C 10.293 38.024 9.397 37.128 9.397 36.024 L 9.397 18.182 L 8.279 19.3 C 7.904 19.676 7.395 19.886 6.864 19.886 C 6.334 19.886 5.824 19.675 5.449 19.3 L 0.584 14.431 C -0.196 13.65 -0.196 12.385 0.584 11.603 L 9.48 2.704 C 9.914 2.269 10.541 2.058 11.145 2.134 C 11.228 2.124 11.312 2.118 11.397 2.118 L 13.87 2.118 C 14.548 2.118 15.181 2.462 15.549 3.031 C 16.336 4.247 18.111 5.032 20.071 5.032 C 22.031 5.032 23.807 4.247 24.594 3.031 C 24.962 2.462 25.594 2.118 26.273 2.118 L 28.746 2.118 C 28.831 2.118 28.915 2.123 28.998 2.134 C 29.08 2.124 29.163 2.118 29.247 2.118 C 29.248 2.118 29.248 2.118 29.248 2.118 C 29.778 2.118 30.287 2.329 30.663 2.704 L 39.557 11.602 C 40.337 12.383 40.337 13.648 39.557 14.43 L 34.693 19.3 C 34.318 19.675 33.809 19.886 33.279 19.886 C 33.278 19.886 33.278 19.886 33.278 19.886 C 32.748 19.887 32.239 19.676 31.864 19.301 L 30.745 18.181 L 30.745 36.024 C 30.744 37.129 29.849 38.024 28.744 38.024 Z"/>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
 
-            <div class="sofa">
-                <div class="dropzone">
-                    <div class="droptargetEdit" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <p ondragstart="dragStart(event)" draggable="true" id="dragtarget"></p>
-                    </div>
+                        <div class="cartItem">
+                            <ul>
+                                <li>Gender:
+                                    <%= postData.gender %>
+                                </li>
+                                <li>Size:
+                                    <%= postData.size %>
+                                </li>
+                                <li>Color:
+                                    <%= postData.color %>
+                                </li>
+                                <li>Text:
+                                    <%= postData.text %>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div class="droptargetEdit" ondrop="drop(event)" ondragover="allowDrop(event)" id="dragtarget2"></div>
-
-                    <div class="droptargetEdit" ondrop="drop(event)" ondragover="allowDrop(event)" id="dragtarget3"></div>
-                </div>
-                <svg id="dropbox" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600" viewBox="0 0 40.143 40.143" xml:space="preserve">
-                <g>
-                    <path d="M 28.744 38.024 L 11.397 38.024 C 10.293 38.024 9.397 37.128 9.397 36.024 L 9.397 18.182 L 8.279 19.3 C 7.904 19.676 7.395 19.886 6.864 19.886 C 6.334 19.886 5.824 19.675 5.449 19.3 L 0.584 14.431 C -0.196 13.65 -0.196 12.385 0.584 11.603 L 9.48 2.704 C 9.914 2.269 10.541 2.058 11.145 2.134 C 11.228 2.124 11.312 2.118 11.397 2.118 L 13.87 2.118 C 14.548 2.118 15.181 2.462 15.549 3.031 C 16.336 4.247 18.111 5.032 20.071 5.032 C 22.031 5.032 23.807 4.247 24.594 3.031 C 24.962 2.462 25.594 2.118 26.273 2.118 L 28.746 2.118 C 28.831 2.118 28.915 2.123 28.998 2.134 C 29.08 2.124 29.163 2.118 29.247 2.118 C 29.248 2.118 29.248 2.118 29.248 2.118 C 29.778 2.118 30.287 2.329 30.663 2.704 L 39.557 11.602 C 40.337 12.383 40.337 13.648 39.557 14.43 L 34.693 19.3 C 34.318 19.675 33.809 19.886 33.279 19.886 C 33.278 19.886 33.278 19.886 33.278 19.886 C 32.748 19.887 32.239 19.676 31.864 19.301 L 30.745 18.181 L 30.745 36.024 C 30.744 37.129 29.849 38.024 28.744 38.024 Z"/>
-                </g>
-            </svg>
-            </div>
+                        <div class="cartItem">
+                            <a class="deleteBtn" onclick="deleteItem()">🗑️</a>
+                        </div>
+                    </article>
+                </article>
+            </section>
         </div>
         <div class="loginArea">
-            <h1>Design</h1>
-            <form action="/saving" method="post" id="regForm" action="/" class="design-form">
+            <div></div>
+            <h1>Personal Information</h1>
+            <form action="/status" id="regForm" action="/">
                 <!-- One "tab" for each step in the form: -->
-                <div class="tab">Choose your Text
-                    <input type="text" id="text" name="text" oninput="changeText()" maxlength="35" required>
-                </div>
-                <div class="tab">Choose your Gender
-                    <div class="radio-toolbar">
-                        <input type="radio" id="male" class="gender" name="gender" value="male" required>
-                        <label for="male">Male</label>
+                <div class="tab">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" pattern="^(\w\w+)\s(\w+)$" required>
 
-                        <input type="radio" id="female" class="gender" name="gender" value="female">
-                        <label for="female">Female</label>
-                    </div>
-                </div>
-                <div class="tab">Choose your Size
-                    <div class="radio-toolbar">
-                        <input type="radio" id="S" class="size" name="size" value="S" required>
-                        <label for="S">S</label>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="0612345678" pattern="[0-9]{10}" required>
 
-                        <input type="radio" id="M" class="size" name="size" value="M">
-                        <label for="M">M</label>
-
-                        <input type="radio" id="L" class="size" name="size" value="L">
-                        <label for="L">L</label>
-
-                        <input type="radio" id="XL" class="size" name="size" value="XL">
-                        <label for="XL">XL</label>
-
-                        <input type="radio" id="XXL" class="size" name="size" value="XXL">
-                        <label for="XXL">XXL</label>
-                    </div>
-                </div>
-                <div class="tab">Choose your Color
-                    <div class="block">
-                        <div class="colors radio-toolbar">
-                            <input type="radio" id="white" class="color" name="color" value="white" required>
-                            <label for="white">White</label>
-
-                            <input type="radio" id="black" class="color" name="color" value="black">
-                            <label for="black">Black</label>
-
-                            <input type="radio" id="red" class="color" name="color" value="red">
-                            <label for="red">Red</label>
-
-                            <input type="radio" id="green" class="color" name="color" value="green">
-                            <label for="green">Green</label>
-
-                            <input type="radio" id="blue" class="color" name="color" value="blue">
-                            <label for="blue">Blue</label>
-
-                            <input type="radio" id="pink" class="color" name="color" value="pink">
-                            <label for="pink" id="pinkLabel">Pink</label>
-
-                        </div>
-                    </div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="sergio@example.com" size="30" required>
                 </div>
                 <div style="overflow:auto;">
                     <div id="stepButtons" style="float:right;">
@@ -192,18 +64,12 @@
                     </div>
                     <input type="submit" value="send" class="save-button" id="subBtn"></input>
                 </div>
-                <!-- Circles which indicates the steps of the form: -->
-                <div style="text-align:center;margin-top:40px;">
-                    <span class="step"></span>
-                    <span class="step"></span>
-                    <span class="step"></span>
-                    <span class="step"></span>
-                </div>
             </form>
         </div>
     </div>
 
-    <script src="/js/renderShirt.js"></script>
-    <script src="/js/liveName.js"></script>
+    <!-- <script src="/js/renderShirt.js"></script> -->
+    <script src="/js/renderData.js"></script>
+    <!-- <script src="/js/liveName.js"></script> -->
 
     <%- include ("./partials/footer") %>

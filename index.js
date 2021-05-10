@@ -59,12 +59,23 @@ app.all('/saving', urlencodedParser, function(req, res) {
     res.redirect("/")
 });
 
-app.get('/order', function(req, res) {
-    res.render("order.ejs")
+app.all('/order', urlencodedParser, function(req, res) {
+    let savedData = fs.readFileSync('data.json');
+    let student = JSON.parse(savedData);
+
+    res.render("order.ejs", {
+        postData: student,
+    })
 });
 
-app.get('/login', function(req, res) {
-    res.render("login.ejs")
+app.get('/order', function(req, res) {
+    res.render("order.ejs", {
+        postData: shirt,
+    })
+});
+
+app.get('/status', function(req, res) {
+    res.render("status.ejs")
 });
 
 app.listen(process.env.PORT || port, () =>
