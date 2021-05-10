@@ -15,6 +15,29 @@ app.set('views', 'views');
 app.use(express.static('public'));
 
 app.all('/', urlencodedParser, function(req, res) {
+    let savedData = fs.readFileSync('data.json');
+    let student = JSON.parse(savedData);
+
+    res.render("overview.ejs", {
+        postData: student,
+    })
+});
+
+app.get('/', function(req, res) {
+    res.render("overview.ejs", {
+        postData: shirt,
+    })
+});
+
+app.get('/design', function(req, res) {
+    res.render("design.ejs")
+});
+
+app.get('/saving', function(req, res) {
+    res.render("saving.ejs")
+});
+
+app.all('/saving', urlencodedParser, function(req, res) {
     let shirt = {
         name: req.body.name,
         phone: req.body.phone,
@@ -33,19 +56,7 @@ app.all('/', urlencodedParser, function(req, res) {
         // console.log('succes')
     }
 
-    res.render("overview.ejs", {
-        postData: shirt,
-    })
-});
-
-app.get('/', function(req, res) {
-    res.render("overview.ejs", {
-        postData: shirt,
-    })
-});
-
-app.get('/design', function(req, res) {
-    res.render("design.ejs")
+    res.redirect("/")
 });
 
 app.get('/order', function(req, res) {

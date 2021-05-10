@@ -40,7 +40,7 @@ function loadFormDataFromLocalStorage() {
                 </ul>
     
                 <div class="buttons">
-                    <a href="/order">Edit</a>
+                    <a href="/design">Edit</a>
                     <a>Add to Cart</a>
                 </div>
             </article>`
