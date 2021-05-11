@@ -1,4 +1,4 @@
-# Progressive Web Apps @cmda-minor-web · 20-21
+# Progressive Web Apps @cmda-minor-web · 2020-2021
 ![Design scherm](https://i.imgur.com/qs6gs6s.png)
 # 🎁 Table of Contents
 * [Live versie](https://github.com/HappyPantss/browser-technologies-2021#-live-versie)
