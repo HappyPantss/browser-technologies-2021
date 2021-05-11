@@ -1,7 +1,23 @@
 # Progressive Web Apps @cmda-minor-web · 20-21
 ![Design scherm](https://i.imgur.com/qs6gs6s.png)
 # 🎁 Table of Contents
-* [Live versie]()
+* [Live versie](https://github.com/HappyPantss/browser-technologies-2021#-live-versie)
+* [Concept](https://github.com/HappyPantss/browser-technologies-2021#-concept)
+  * [Uitleg](https://github.com/HappyPantss/browser-technologies-2021#uitleg)
+  * [Use case](https://github.com/HappyPantss/browser-technologies-2021#use-case)
+* [Schets](https://github.com/HappyPantss/browser-technologies-2021#%EF%B8%8F-schets)
+* [API/ Browser Technologie](https://github.com/HappyPantss/browser-technologies-2021#-api-browser-technologie)
+* [Progressive Enhancement](https://github.com/HappyPantss/browser-technologies-2021#-progressive-enhancement)
+  * [Wat is Progressive Enhancement?](https://github.com/HappyPantss/browser-technologies-2021#wat-is-progressive-enhancement)
+  * [Progressive Enhancement in mijn project](https://github.com/HappyPantss/browser-technologies-2021#progressive-enhancement-in-mijn-project)
+* [Feature Detection](https://github.com/HappyPantss/browser-technologies-2021#-feature-detection)
+  * [Wat is Feature Detection?](https://github.com/HappyPantss/browser-technologies-2021#wat-is-feature-detection)
+  * [Feature Detection in mijn project](https://github.com/HappyPantss/browser-technologies-2021#feature-detection-in-mijn-project)
+* [Testen](https://github.com/HappyPantss/browser-technologies-2021#-testen)
+  * [Conclusies](https://github.com/HappyPantss/browser-technologies-2021#conclusies)
+* [Installatie](https://github.com/HappyPantss/browser-technologies-2021#-installatie)
+* [Gebruik](https://github.com/HappyPantss/browser-technologies-2021#-gebruik)
+
 # 🌍 Live versie
 Dit is de repository voor browser-technologies CMD 2020/2021.<br>
 🌍 Live versie: https://custom-tshirt-bt.herokuapp.com/
@@ -111,6 +127,7 @@ if (window.localStorage) {
 ### CSS 
 Je kan in CSS de selector @supports gebruiken. Dit laat je declaraties specificeren die afhankelijk zijn van de ondersteuning van een browser voor een of meer specifieke CSS-functies. Als deze CSS-functie wel bestaat, gebruikt hij deze ook. Maar met `@supports not` vraag je of de browser een bepaalde CSS-functie ondersteund, zo niet, gebruik de gene in de support.
 
+**Code:**
 ```CSS
 @supports not (background-color: rgba(255, 0, 0, 0.274)) {
     div {
@@ -232,6 +249,21 @@ Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is
 
 </p>
 </details>
+
+## Conclusies
+### localStorage:
+Local Storage is een hele goede optie om data op te slaan. Je kan het per client opslaan, en weer ophalen wanneer je wilt. Het nadeel is dat de gebruik dit zelf kan verwijderen natuurlijk. Gelukkig werkt localStorage op alle browsers/ apparaten.Alleen heeft localStorage JavaScript nodig om te kunnen werken. Gelukkig heb je hier veel alternatieven voor die je kunt gebruiken, om de data alsnog op te slaan. Zoals ik heb gedaan met File System, dus het schrijven naar een statische file. Maar je kan ook een database gebruiken.
+
+**Can I Use - localStorage:**<br>
+![CIU localStorage](https://i.imgur.com/Fdayqez.png)
+
+
+### Drag and Drop:
+Drag and Drop is een hele leuke API om interactie te verbeteren/ leuker te maken. Je kan er heel erg veel mee, en dat met oneindig veel concepten! Het nadeel is alleen dat het voor nu nog niet op heel veel mobiele apparaten werkt. Heel veel onbekende browsers, maar ook Safari op iOS, en dat is een browser die natuurlijk heel veel gebruikt word. Helaas zijn er nog geen alternatieven (dat ik weet) voor Drag and Drop. Maar het is zeker leuk om mee te werken!
+
+**Can I Use - Drag and Drop:**<br>
+
+![CIU Drag and Drop](https://i.imgur.com/uv9f5hm.png)
 
 # 🚀 Installatie
 **Clone de repository:**<br>
