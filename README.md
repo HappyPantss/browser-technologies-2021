@@ -104,11 +104,22 @@ De local storage functie werkt sowieso alleen maar als JavaScript aanstaat, maar
 **Code:**
 ```JavaScript
 if (window.localStorage) {
-// Functies
+    // Functies
+}
+```
+
+### CSS 
+Je kan in CSS de selector @supports gebruiken. Dit laat je declaraties specificeren die afhankelijk zijn van de ondersteuning van een browser voor een of meer specifieke CSS-functies. Als deze CSS-functie wel bestaat, gebruikt hij deze ook. Maar met `@supports not` vraag je of de browser een bepaalde CSS-functie ondersteund, zo niet, gebruik de gene in de support.
+
+```CSS
+@supports not (background-color: rgba(255, 0, 0, 0.274)) {
+    div {
+        background-color: #ff000030;
+    }
 }
 ```
 # 🔨 Testen
-De tests hieronder zijn van mijn herkansing. Wil je graag de oude tests zien? Ga dan naar [de wiki]().
+De tests hieronder zijn van mijn herkansing. Wil je graag de oude tests zien? Ga dan naar [de wiki](https://github.com/HappyPantss/browser-technologies-2021/wiki/Tests).
 
 De browsers waarop ik mijn app op heb getest:
 * Desktop: Mozilla Firefox
@@ -123,49 +134,49 @@ Functies die getest worden:
 * JavaScript uit
 
 **Bekijk de tests:**
-<!-- <details>
+<details>
 <summary>Desktop: Mozilla Firefox</summary>
-<p> -->
+<p>
 
 ## localStorage:
-**Javascript aan:**
-![Javascript aan](https://i.imgur.com/vgmRW62.gif)
+**Javascript aan:**<br>
+![Javascript aan](https://i.imgur.com/vgmRW62.gif)<br>
 De data word opgeslagen in de local storage. Zodra de gebruiker de website verlaat, word deze ingeladen, en word al deze data weer laten zien. Alles werkt zoals behoren.
 
-**Javascript uit:**
-![Javascript uit](https://i.imgur.com/Zf3Hlp5.gif)
-Zodra JavaScript uit staat werkt Local Storage niet meer. In plaats hiervan word de data in een JSON file opgeslagen.
+**Javascript uit:**<br>
+![Javascript uit](https://i.imgur.com/Zf3Hlp5.gif)<br>
+Zodra JavaScript uit staat werkt Local Storage niet meer. In plaats hiervan word de data in een JSON file opgeslagen. Deze functie werkt goed op Firefox.
 
 ## Drag and Drop:
-**Javascript aan:**
-![Javascript aan](https://i.imgur.com/LKqkpnu.gif)
-De data word opgeslagen in de local storage. Zodra de gebruiker de website verlaat, word deze ingeladen, en word al deze data weer laten zien.
+**Javascript aan:**<br>
+![Javascript aan](https://i.imgur.com/LKqkpnu.gif)<br>
+De Drag and Drop API werkt perfect op Mozilla Firefox.
 
 **Javascript uit:**
+Met JavaScript uit, werkt de hele Drang and Drop API niet meer, omdat deze volledig clientside JavaScript gebruikt.
 
-
-<!-- </p>
-</details><br> -->
+</p>
+</details><br>
 <details>
 <summary>Desktop: Opera GX</summary>
 <p>
 
 ## localStorage:
-**Javascript aan:**
-![Javascript aan](https://i.imgur.com/gNBOZFm.gif)
-De data word opgeslagen in de local storage. Zodra de gebruiker de website verlaat, word deze ingeladen, en word al deze data weer laten zien. Alles werkt zoals behoren.
+**Javascript aan:**<br>
+![Javascript aan](https://i.imgur.com/gNBOZFm.gif)<br>
+De data word opgeslagen in de local storage. Zodra de gebruiker de website verlaat, word deze ingeladen, en word al deze data weer laten zien. Alles werkt zoals behoren in de browser Opera GX, dat een Chromium variant is. Chromium is een opensourceproject dat de broncode voor Google Chrome en afgeleiden levert. 
 
-**Javascript uit:**
-![Javascript uit](https://i.imgur.com/yMWrzPo.gif)
-Zodra JavaScript uit staat werkt Local Storage niet meer. In plaats hiervan word de data in een JSON file opgeslagen.
+**Javascript uit:**<br>
+![Javascript uit](https://i.imgur.com/yMWrzPo.gif)<br>
+Als JavaScript uit staat werkt Local Storage niet meer in deze browser. In plaats hiervan word de data in een JSON file opgeslagen. Dit werkt hartstikke goed, want zodra je het formulier verstuurd, kan je de data in het overview zien.
 
 ## Drag and Drop:
-**Javascript aan:**
-![Javascript aan](https://i.imgur.com/LgyTVPC.gif)
-De data word opgeslagen in de local storage. Zodra de gebruiker de website verlaat, word deze ingeladen, en word al deze data weer laten zien.
+**Javascript aan:**<br>
+![Javascript aan](https://i.imgur.com/LgyTVPC.gif)<br>
+Zoals de vorige browser, werkt het Drag and Drop gedeelte hier super goed. Je moet alleen goed weten waar je je tekst kan neerzetten, en dat je uberhaupt kan draggen en droppen.
 
 **Javascript uit:**
-
+Met JavaScript uit werkt de hele API niet meer, dit was zo bij de vorige browser, en dat zal bij alle zijn. Hier is nog geen alternatief voor, maar het had wel op een andere manier kunnen gebeuren.
 </p>
 </details><br>
 <details>
@@ -173,20 +184,24 @@ De data word opgeslagen in de local storage. Zodra de gebruiker de website verla
 <p>
 
 ## localStorage:
-**Javascript aan:**
-Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=DJdvBs_TdE4) te zien.
+**Javascript aan:**<br>
 De data word opgeslagen in de local storage. Zodra de gebruiker de website verlaat, word deze ingeladen, en word al deze data weer laten zien. Alles werkt zoals behoren.
 
-**Javascript uit:**
-Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=ttPWKWAAfNk) te zien.
+Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=DJdvBs_TdE4) te zien.
+
+**Javascript uit:**<br>
 Zodra JavaScript uit staat werkt Local Storage niet meer. In plaats hiervan word de data in een JSON file opgeslagen.
 
-## Drag and Drop:
-**Javascript aan:**
-Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=liWlOTJg5LA) te zien.
-De data word opgeslagen in de local storage. Zodra de gebruiker de website verlaat, word deze ingeladen, en word al deze data weer laten zien.
+Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=ttPWKWAAfNk) te zien.
 
-**Javascript uit:**
+## Drag and Drop:
+**Javascript aan:**<br>
+Op Android Chrome werkt de Drag and Drop API, alleen zoals je ziet in de video, heb ik er soms wat moeite mee. Dit is omdat je met vasthouden natuurlijk ook vaak kan scrollen. Het is dus even weten wat je vast kan pakken, en waar het heen kan.
+
+Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=liWlOTJg5LA) te zien.
+
+**Javascript uit:**<br>
+Ook hier werkt Drag and Drop niet meer met JavaScript uit.
 
 </p>
 </details><br>
@@ -195,23 +210,28 @@ De data word opgeslagen in de local storage. Zodra de gebruiker de website verla
 <p>
 
 ## localStorage:
-**Javascript aan:**
-Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=0edcQubjHm0) te zien.
+**Javascript aan:**<br>
 De data word opgeslagen in de local storage. Zodra de gebruiker de website verlaat, word deze ingeladen, en word al deze data weer laten zien. Alles werkt zoals behoren.
 
-**Javascript uit:**
-Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=etfF2vKd9l0) te zien.
+Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=0edcQubjHm0) te zien.
+
+**Javascript uit:**<br>
 Zodra JavaScript uit staat werkt Local Storage niet meer. In plaats hiervan word de data in een JSON file opgeslagen.
 
-## Drag and Drop:
-**Javascript aan:**
-Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=-ERvptKM4xE) te zien.
-De data word opgeslagen in de local storage. Zodra de gebruiker de website verlaat, word deze ingeladen, en word al deze data weer laten zien.
+Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=etfF2vKd9l0) te zien.
 
-**Javascript uit:**
+## Drag and Drop:
+**Javascript aan:**<br>
+Het was leuk om te zien dat het in deze browser heel anders ging. De Drag and Drop API werkt namelijk niet in Samsung Internet! Drag and Drop is namelijk voor heel veel mobiele browsers niet ondersteund. Dat kan je zien in de volgende afbeelding van [Can I Use](https://caniuse.com/).
+
+![CIU Drag and Drop](https://i.imgur.com/uv9f5hm.png)
+
+Helaas werd dit gifje iets te lang, dus ik heb de video op YouTube gezet, die is [hier](https://www.youtube.com/watch?v=-ERvptKM4xE) te zien.
+
+**Javascript uit:**<br>
 
 </p>
-</details><br>
+</details>
 
 # 🚀 Installatie
 **Clone de repository:**<br>

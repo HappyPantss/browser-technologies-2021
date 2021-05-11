@@ -82,22 +82,6 @@ div.loginArea button {
     border-radius: 0.5rem;
 }
 
-span.rememberMe {
-    margin-left: 2rem;
-}
-
-div.formpjes a label {
-    cursor: pointer;
-    color: #00A8FF;
-    font-weight: 700;
-}
-
-a.forgotPw label {
-    cursor: pointer;
-    color: darkgray;
-    text-decoration: underline;
-}
-
 @media only screen and (min-width: 1450px) {
     div.container {
         font-family: 'Oswald', sans-serif;
@@ -486,6 +470,15 @@ a.orderBtn:active {
 .deleteBtn:hover {
     background-color: rgba(255, 0, 0, 0.274);
     border: 2px solid red;
+}
+
+@supports not (background-color: rgba(255,
+0,
+0,
+0.274)) {
+    div {
+        background-color: #ff000030;
+    }
 }
 
 ul {
