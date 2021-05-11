@@ -2,12 +2,13 @@
 
     <div class="container">
         <div class="bgArea">
+            <a href="/" id="back">HOME</a>
             <h1>Shopping cart</h1>
 
             <section class="cartPieces">
                 <p id="emptyCart"></p>
                 <article class="cartPiece">
-                    <article class="cartItems">
+                    <article class="cartItemsOrder">
                         <div class="cartItem">
                             <div class="sofaCart">
                                 <svg fill="<%= postData.color %>" id="dropbox" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 40.143 40.143" xml:space="preserve">
@@ -58,7 +59,7 @@
                     <input type="email" id="email" name="email" placeholder="sergio@example.com" size="30" required>
                 </div>
                 <div style="overflow:auto;">
-                    <div id="stepButtons" style="float:right;">
+                    <div id="stepButtons">
                         <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                         <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
                     </div>

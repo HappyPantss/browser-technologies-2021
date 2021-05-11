@@ -2,6 +2,7 @@
 body {
     padding: 0;
     margin: 0;
+    background-color: #9646D4;
 }
 
 a {
@@ -10,45 +11,41 @@ a {
 
 div.container {
     font-family: 'Oswald', sans-serif;
-    display: grid;
-    height: 100%;
-    grid-template-columns: [bgArea] 70% [loginArea] 30%;
-    /* grid-template-columns: [bgArea] 70vw [loginArea] 30vw; */
 }
-
-div.bgArea h1,
-div.loginArea h1 {
-    color: #9646D4;
-    font-size: 2.6rem;
-}
-
-
-/* Background Area */
 
 div.bgArea {
     grid-area: bgArea;
     text-align: center;
-    height: 100vh;
     background-repeat: no-repeat;
-    /* background: repeating-linear-gradient( 90deg, #9646D4 0%, #9646D4 5%, white 5%, white 10%), #9646D4; */
     background-image: url('../img/cake-pattern.png');
     background-repeat: repeat;
     background-size: 64px 64px;
 }
 
+div.bgArea h1,
+div.loginArea h1 {
+    margin: 0;
+    color: #9646D4;
+    font-size: 2rem;
+    border-radius: 0;
+}
 
-/* --------------- */
+.progForm {
+    border-radius: 0;
+}
 
-
-/* Login Area */
+div.loginArea img {
+    width: 10rem;
+    margin: auto;
+    display: block;
+}
 
 div.loginArea {
-    overflow: auto;
-    height: 89.9vh;
     grid-area: loginArea;
-    background-color: #9646D4;
-    padding: 3rem;
+    /* margin: 2rem 2rem 0 2rem; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: auto;
+    background-color: #9646D4;
 }
 
 div.loginArea input {
@@ -57,16 +54,15 @@ div.loginArea input {
     padding: 1.3rem;
     width: 100%;
     border-radius: 0.5rem;
-    font-size: 1rem;
 }
 
-#subBtn {
-    width: 60%;
-    margin: 0 auto;
+div.loginArea input:focus {
+    border: 1px solid #9646D4;
+    outline: none;
 }
 
 div.loginArea label {
-    padding: 0.6rem 0.6rem;
+    padding: 0.6rem 0;
 }
 
 div.loginArea input,
@@ -74,35 +70,154 @@ div.loginArea label {
     display: block;
 }
 
-a.formBtn {
-    width: 40%;
+div.bgArea button,
+div.loginArea button {
+    width: 49%;
     background-color: #9646D4;
+    border: none;
     color: #FFFFFF;
-    padding: 0.8rem;
-    border-radius: 1.5rem;
-    border: 2px solid #9646D4;
-    -webkit-transition: background-color 0.1s ease-out;
-    -moz-transition: background-color 0.1s ease-out;
-    -o-transition: background-color 0.1s ease-out;
-    transition: background-color 0.1s ease-out;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    padding: 1.3rem;
+    border-radius: 0.5rem;
 }
 
-a.formBtn:hover {
-    /* background-color: #AD8EC5; */
-    background-color: white;
-    border: 2px solid #9646D4;
-    color: #9646D4;
+span.rememberMe {
+    margin-left: 2rem;
 }
 
-a.formBtn:active {
-    background-color: #9646D4;
-    color: white;
+div.formpjes a label {
+    cursor: pointer;
+    color: #00A8FF;
+    font-weight: 700;
 }
 
-.buttons {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+a.forgotPw label {
+    cursor: pointer;
+    color: darkgray;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 1450px) {
+    div.container {
+        font-family: 'Oswald', sans-serif;
+        display: grid;
+        height: 100%;
+        grid-template-columns: [bgArea] 70% [loginArea] 30%;
+        /* grid-template-columns: [bgArea] 70vw [loginArea] 30vw; */
+    }
+    div.bgArea h1,
+    div.loginArea h1 {
+        color: #9646D4;
+        font-size: 2.6rem;
+    }
+    /* Background Area */
+    div.bgArea {
+        grid-area: bgArea;
+        text-align: center;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-image: url('../img/cake-pattern.png');
+        background-repeat: repeat;
+        background-size: 64px 64px;
+    }
+    /* --------------- */
+    /* Login Area */
+    div.loginArea {
+        overflow: auto;
+        height: 89.9vh;
+        grid-area: loginArea;
+        background-color: #9646D4;
+        padding: 3rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    div.loginArea input {
+        box-sizing: border-box;
+        border: 1px solid #CCCCCC;
+        padding: 1.3rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+    }
+    #subBtn {
+        width: 60%;
+        margin: 0 auto;
+    }
+    div.loginArea label {
+        padding: 0.6rem 0.6rem;
+    }
+    div.loginArea input,
+    div.loginArea label {
+        display: block;
+    }
+    a.formBtn {
+        width: 40%;
+        background-color: #9646D4;
+        color: #FFFFFF;
+        padding: 0.8rem;
+        border-radius: 1.5rem;
+        border: 2px solid #9646D4;
+        -webkit-transition: background-color 0.1s ease-out;
+        -moz-transition: background-color 0.1s ease-out;
+        -o-transition: background-color 0.1s ease-out;
+        transition: background-color 0.1s ease-out;
+    }
+    a.formBtn:hover {
+        /* background-color: #AD8EC5; */
+        background-color: white;
+        border: 2px solid #9646D4;
+        color: #9646D4;
+    }
+    a.formBtn:active {
+        background-color: #9646D4;
+        color: white;
+    }
+    .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .droptargetEdit {
+        width: 240px;
+        height: 100px;
+        padding: 10px;
+        color: white;
+        word-wrap: break-word;
+        /* border: 1px solid pink; */
+    }
+    .droptargetEdit p {
+        font-size: 1.6rem;
+    }
+    .pieces {
+        border: 5px solid #9646D4;
+        border-radius: 1.5rem;
+        margin: 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        flex-direction: column;
+    }
+    .cartItems {
+        border: 2px solid white;
+        padding: 0.6rem;
+        border-radius: 1.5rem;
+        display: grid;
+        grid-template-columns: 25% 70% 5%;
+    }
+    .cartItemsOrder {
+        border: 2px solid white;
+        padding: 0.6rem;
+        border-radius: 1.5rem;
+        display: grid;
+        grid-template-columns: 15% 80% 5%;
+    }
+    .cartItem:nth-child(2) {
+        justify-content: start;
+    }
+    .bgArea .cartPieces {
+        margin: 5rem;
+    }
 }
 
 
@@ -173,6 +288,9 @@ input {
     display: initial;
 }
 
+
+/* DRAG AND DROP */
+
 .droptarget {
     width: 120px;
     height: 45px;
@@ -181,22 +299,72 @@ input {
     word-wrap: break-word;
 }
 
-.droptargetEdit {
-    width: 240px;
-    height: 100px;
-    padding: 10px;
-    color: white;
-    word-wrap: break-word;
-    /* border: 1px solid pink; */
+@media only screen and (max-width: 1450px) {
+    .droptargetEdit {
+        width: 160px;
+        height: 69px;
+        padding: 10px;
+        color: white;
+        word-wrap: break-word;
+        /* border: 1px solid pink; */
+    }
+    .droptargetEdit p {
+        font-size: 1.4rem;
+    }
+    .pieces {
+        border: 5px solid #9646D4;
+        border-radius: 1.5rem;
+        margin: 5px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+    }
+    .cartPieces {
+        margin: 1rem;
+    }
+    a.formBtn {
+        width: 40%;
+        background-color: #9646D4;
+        color: #FFFFFF;
+        padding: 0.8rem;
+        border-radius: 1.5rem;
+        border: 2px solid #9646D4;
+        -webkit-transition: background-color 0.1s ease-out;
+        -moz-transition: background-color 0.1s ease-out;
+        -o-transition: background-color 0.1s ease-out;
+        transition: background-color 0.1s ease-out;
+    }
+    a.formBtn:hover {
+        /* background-color: #AD8EC5; */
+        background-color: white;
+        border: 2px solid #9646D4;
+        color: #9646D4;
+    }
+    a.formBtn:active {
+        background-color: #9646D4;
+        color: white;
+    }
+    .cartItems {
+        border: 2px solid white;
+        padding: 0.6rem;
+        border-radius: 1.5rem;
+        display: grid;
+        grid-template-columns: 30% 65% 5%;
+    }
+    .bgArea .cartPieces {
+        margin: 10px;
+    }
+    .cartItems svg {
+        width: 75px;
+        height: 75px;
+    }
 }
 
 .droptarget p {
     margin-top: 0;
     text-shadow: 0px 0px 3px black;
-}
-
-.droptargetEdit p {
-    font-size: 1.6rem;
 }
 
 .droptarget:nth-of-type(3) p {
@@ -221,17 +389,6 @@ input {
     display: flex;
     justify-content: center;
     height: 30rem;
-}
-
-.pieces {
-    border: 5px solid #9646D4;
-    border-radius: 1.5rem;
-    margin: 0 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    flex-direction: column;
 }
 
 ul {
@@ -266,17 +423,29 @@ a.orderBtn:hover {
     color: #FFFFFF;
 }
 
+#subBtn {
+    width: 97%;
+    background-color: #FFFFFF;
+    color: #9646D4;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    border-radius: 1.5rem;
+    border: 2px solid #9646D4;
+    -webkit-transition: background-color 0.1s ease-out;
+    -moz-transition: background-color 0.1s ease-out;
+    -o-transition: background-color 0.1s ease-out;
+    transition: background-color 0.1s ease-out;
+}
+
+#subBtn:hover {
+    /* background-color: #AD8EC5; */
+    background-color: #9646D4;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
 a.orderBtn:active {
     background-color: #9646D4;
     color: white;
-}
-
-.cartItems {
-    border: 2px solid white;
-    padding: 0.6rem;
-    border-radius: 1.5rem;
-    display: grid;
-    grid-template-columns: 7rem 18.8rem 2.7rem;
 }
 
 .buttonItem {
@@ -324,10 +493,6 @@ ul {
     padding: 0;
 }
 
-.bgArea .cartPieces {
-    margin: 5rem;
-}
-
 
 /* PROGRESSIVE DESIGN FORM */
 
@@ -336,7 +501,6 @@ ul {
     margin: 60px auto;
     padding: 40px;
     min-width: 300px;
-    border-radius: 4px;
 }
 
 .loginArea h1 {

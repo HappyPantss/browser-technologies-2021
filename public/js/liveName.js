@@ -5,39 +5,41 @@ function changeText() {
     document.getElementById("dragtarget").innerHTML = x;
 }
 
-const form = document.querySelector(".design-form");
+if (window.localStorage) {
+    const form = document.querySelector(".design-form");
 
-form.addEventListener('blur', (event) => {
-    const formElement = document.querySelector(".design-form");
-    const formData = new FormData(formElement);
-    const obj = {};
+    form.addEventListener('blur', (event) => {
+        const formElement = document.querySelector(".design-form");
+        const formData = new FormData(formElement);
+        const obj = {};
 
-    for (var pair of formData.entries()) {
-        obj[pair[0]] = pair[1];
-    }
+        for (var pair of formData.entries()) {
+            obj[pair[0]] = pair[1];
+        }
 
-    localStorage.setItem('formData', JSON.stringify(obj));
-}, true);
+        localStorage.setItem('formData', JSON.stringify(obj));
+    }, true);
 
-function loadFormDataFromLocalStorage() {
-    const data = localStorage.getItem('formData');
-    const dragtarget = document.querySelector("#dragtarget");
+    function loadFormDataFromLocalStorage() {
+        const data = localStorage.getItem('formData');
+        const dragtarget = document.querySelector("#dragtarget");
 
-    if (data) {
-        const parsedData = JSON.parse(data);
-        dragtarget.innerHTML = parsedData.text;
+        if (data) {
+            const parsedData = JSON.parse(data);
+            dragtarget.innerHTML = parsedData.text;
 
-        for (var pair of Object.entries(parsedData)) {
-            const pairDomElement = document.getElementById(pair[0]);
+            for (var pair of Object.entries(parsedData)) {
+                const pairDomElement = document.getElementById(pair[0]);
 
-            if (pairDomElement) {
-                pairDomElement.value = pair[1];
-            } else {
-                const pairDomElements = document.getElementsByClassName(pair[0]);
+                if (pairDomElement) {
+                    pairDomElement.value = pair[1];
+                } else {
+                    const pairDomElements = document.getElementsByClassName(pair[0]);
 
-                for (const pairDomElement of pairDomElements) {
-                    if (pairDomElement.type == 'radio' && pairDomElement.value == pair[1]) {
-                        pairDomElement.checked = true;
+                    for (const pairDomElement of pairDomElements) {
+                        if (pairDomElement.type == 'radio' && pairDomElement.value == pair[1]) {
+                            pairDomElement.checked = true;
+                        }
                     }
                 }
             }
